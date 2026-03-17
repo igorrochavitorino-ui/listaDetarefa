@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Tabuada</title>
+</head>
+<body>
+    <h2>Gerador de Tabuada</h2>
+
+    <p>Digite um número para ver a tabuada:</p>
+    <input type="number" id="numeroInput" placeholder="Ex: 7">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+    <div id="resultado">
+        <p>Aguardando número...</p>
+    </div>
+
+    <script>
+        function gerarTabuada(){
+            const num = Number(document.getElementById('numeroInput').value)
+            const areaResultado = document.getElementById('resultado')
+
+            areaResultado.innerHTML = "<h3>Tabuada do " + num + "</h3>"
+
+            for (let i=1; i<=10; i++){
+                let res = num * i
+                areaResultado.innerHTML += num + " x " + i + " = " + res + "<br>"
+            }
+
+        }
+    </script>
+</body>
+</html>

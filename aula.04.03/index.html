@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Combustível</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Sistema de Economia de Combustível</h1>
+        <nav>
+            <a href="index.html">Cálculo</a>
+            <a href="calculo.html">Tabela</a>
+
+        </nav>
+    </header>
+    <h1></h1>
+    <img src="https://garagem360.com.br/wp-content/uploads/2022/09/bomba-de-combustivel.jpeg" width="400">
+    <img src="./ford-f350.gif" alt="">
+    <main>
+        <h2>Cálculo Álcool x Gasolina</h2>
+
+        <label> valor a abastecer do Álcool: </label>
+        <input type="number" id="alcool" step="5.41"><br><br>
+
+        <label>valor a abastecer da Gasolina:</label>
+        <input type="number" id="gasolina" step="6.21"><br><br>
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Igor Rocha - 2026</p>
+    </footer>
+
+    <script>
+        function calcular() {
+
+            let alcool = parseFloat(document.getElementById("alcool").value);
+            let gasolina = parseFloat(document.getElementById("gasolina").value);
+            let resultado = document.getElementById("resultado");
+
+            if (alcool / gasolina <= 0.7) {
+                resultado.innerHTML = "Melhor abastecer com Álcool!";
+                resultado.style.backgroundColor = "lightgreen";
+            } else {
+                resultado.innerHTML = "Melhor abastecer com Gasolina!";
+                resultado.style.backgroundColor = "lightcoral";
+            }
+
+            resultado.style.padding = "10px";
+            resultado.style.marginTop = "15px";
+        }
+    </script>
+
+</body>
+
+</html>

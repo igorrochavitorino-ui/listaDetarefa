@@ -1,0 +1,54 @@
+.body{
+  color: aqua;
+  background-color: rgb(255, 161, 127);
+}
+
+.estrada{
+  width:100%;
+  height:150px;
+  background:#555;
+  position:relative;
+  overflow:hidden;
+}
+
+.carro{
+  position:absolute;
+  bottom:40px;
+  left:-200px;
+  animation:andar 6s linear infinite;
+}
+
+.corpo{
+  width:200px;
+  height:50px;
+  background:red;
+  border-radius:10px;
+}
+
+.roda{
+  width:40px;
+  height:40px;
+  background:black;
+  border-radius:50%;
+  position:absolute;
+  bottom:-20px;
+  animation:girar 1s linear infinite;
+}
+
+.roda1{
+  left:20px;
+}
+
+.roda2{
+  right:20px;
+}
+
+@keyframes girar{
+  from{ transform:rotate(0deg); }
+  to{ transform:rotate(360deg); }
+}
+
+@keyframes andar{
+  from{ left:-200px; }
+  to{ left:100%; }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inscriçao</title>
+</head>
+<body>
+    <h1>formulario de inscrição - curso de desenvolvimento web</h1>
+    <p>preencha o formulario abaixo para se inscrever em nosso curso.</p>
+
+    <form action= "n" method="POST">
+        <h2> 1. dados pessoas</h2>
+        <!--texto simples -->
+        
+        <label for="nome" >nome completo</label>
+        <input type="text" id="nome"
+        nome="nome"><br><br>
+
+        <!-- campo de email-->
+         <label for="email">E-mail</label>
+         <input type="email"
+         id="email" name="email"><br><br>
+
+         <!--campo de senha-->
+         <label for="senha">crie uma senha</label>
+         <input type="password"
+         id="senha" name="senha"><br><br>
+         
+         <!--Campo de telefone-->
+         <label for="telefone">telefone</label>
+         <input type="tel"
+         id="telefone" name="telefone"
+         pattern="[0-]9{2}-[0-9]{5}=[0-9]{4}">
+         <small>Formato: 11-12345-6789</small><br><br>
+
+          <!-- Texto longo -->
+          <label for="sobre">Conte um pouco sobre você: </label>
+          <br>
+          <textarea name="sobre" id="sobre" rows="4" cols ="50"></textarea>
+          <br><br>
+          <h2>2. Informações do curso</h2>
+          <!-- Select -->
+           <label for="curso">Selecione o curso desejado:</label>
+           <select name="curso" id="curso">
+            <option value=""></option>
+            <option value="frontend">Programador Frontend</option>
+            <option value="backend">Programador Backend</option>
+            <option value="fullstack">Fullstack</option>
+            <br><br>
+            <!-- Escolha unica  -->
+             <!-- o name no caso da escolha precisa ser igual, pois assim ele vai saber que é uma escolha -->
+             <p>Turno preferido:</p>
+             <input type="radio" id="manha" name="turno"value>
+             <label for="manha">Manhã</label>
+
+             <input type="radio" id="tarde" name="turno"value>
+             <label for="tarde">Tarde</label>
+
+             <input type="radio" id="noite" name="turno"value>
+             <label for="noite">Noite</label>
+             <br><br>
+
+             <!-- Multiplas seleções -->
+              <p>Quais as tecnologias que você usa?</p>
+              <input type="checkbox" id="html" name="tecnologias" value="html">
+              <label for="html">HTML</label>
+              <br>
+              <input type="checkbox" id="css" name="tecnologias" value="css">
+              <label for="css">CSS</label>
+              <br>
+              <input type="checkbox" id="javascript" name="tecnologias" value="javascript">
+              <label for="javascript">javascript</label>
+              <br><br>
+              <!-- Upload de arquivo -->
+               <label for="curriculo">curriculo</label>
+               <input type="file"
+               id="curriculo"
+               name="curriculo"
+               accept="pdf, .doc, docx"><br><br>
+
+               <!--numerico-->
+               <label for="experiencia">anos de experienciana na area</label>
+               <input type="number"
+               id="experiencia"
+               name="experiencia"
+               min="0" max="30"
+               step="0.5"><br><br><br>
+               
+
+               <!-- campo de intervalo -->
+                <label for="investimento">quanto pretende investir por mes?</label>
+                <input type="range"
+                id="investimento"
+                name="investimento" 
+                min="100"
+                max="1000"
+                step="50"><br><br>
+
+                <!--data -->
+                <label for="inicio">quando pretende iniciar </label>
+                <input type="date" id="inicio" name="inicio"><br><br>
+
+                <!--campo de pesquisa-->
+                <label for="busca">Buscar por palavra-chave:</label>
+                <input type="search" 
+                id="busca" 
+                name="busca"> <br><br>
+
+                <!-- Botões de envio e reset -->
+
+                
+                <input type="submit" value="Enviar Inscrição">
+                <input type="reset" value="Limpar Formulário"><br><br>
+        
+        
+                <!-- Botão genérico -->
+                <button type="button" 
+                onclick="alert('Este é um botão genérico que pode executar JavaScript')">Ajuda</button>
+
+    
+
+
+                
+
+
+
+
+              
+
+           </select>
+    </form>
+</body>
+</html>
